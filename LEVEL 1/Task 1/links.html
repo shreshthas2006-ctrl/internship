@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Navbar</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Navbar container */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(90deg, #4b6cb7, #182848);
+      padding: 15px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Links */
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 25px;
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    /* Hover animation underline */
+    .navbar a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover::after {
+      width: 100%;
+    }
+
+    .navbar a:hover {
+      color: #ffdd57;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+</body>
+</html>

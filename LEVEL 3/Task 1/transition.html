@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>South Indian Dishes Slider</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff3e0;
+    text-align: center;
+}
+
+h1 {
+    color: #e65100;
+    margin-top: 20px;
+}
+
+/* Slider Container */
+.slider {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+/* Each Slide */
+.slide {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+/* Images */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Fill the slider */
+    display: block;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Pause animation on hover */
+.slider:hover .slides {
+    animation-play-state: paused;
+}
+
+/* Slider Animation */
+@keyframes slide {
+
+    0%,20% {
+        transform: translateX(0%);
+    }
+
+    25%,45% {
+        transform: translateX(-100%);
+    }
+
+    50%,70% {
+        transform: translateX(-200%);
+    }
+
+    75%,95% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🍛 South Indian Dishes</h1>
+
+<div class="slider">
+
+    <div class="slides">
+
+        <div class="slide">
+            <img src="dosa.jpeg" alt="Dosa">
+            <div class="caption">Dosa</div>
+        </div>
+
+        <div class="slide">
+            <img src="idli.jpeg" alt="Idli">
+            <div class="caption">Idli</div>
+        </div>
+
+        <div class="slide">
+            <img src="sambhar.png" alt="Sambar">
+            <div class="caption">Sambar</div>
+        </div>
+
+        <div class="slide">
+            <img src="vada.jpeg" alt="Vada">
+            <div class="caption">Vada</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

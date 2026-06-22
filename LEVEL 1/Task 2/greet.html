@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Greeting</title>
+
+  <style>
+    body {
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(45deg, #22c55e, #06b6d4);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Custom alert box */
+    #alertBox {
+      position: fixed;
+      top: 20px;
+      right: -300px;
+      background: white;
+      color: black;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.5s;
+    }
+
+    #alertBox.show {
+      right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<button onclick="showGreeting()">Click for Greeting 🌟</button>
+
+<div id="alertBox"></div>
+
+<script>
+function showGreeting() {
+  const hour = new Date().getHours();
+  let message = "";
+
+  if (hour < 12) {
+    message = "Good Morning ☀️";
+  } else if (hour < 18) {
+    message = "Good Afternoon 🌤️";
+  } else {
+    message = "Good Evening 🌙";
+  }
+
+  const alertBox = document.getElementById("alertBox");
+  alertBox.innerText = message;
+
+  // Show animation
+  alertBox.classList.add("show");
+
+  // Hide after 3 sec
+  setTimeout(() => {
+    alertBox.classList.remove("show");
+  }, 3000);
+}
+</script>
+
+</body>
+</html>

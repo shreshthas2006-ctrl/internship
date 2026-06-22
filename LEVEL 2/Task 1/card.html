@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flower Card</title>
+
+  <!-- Bulma CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <style>
+    body {
+      background: #f0fdf4;
+    }
+
+    .card {
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="section">
+  <div class="container">
+
+    <h1 class="title has-text-centered">🌼 Flower Card</h1>
+
+    <div class="columns is-centered">
+      
+      <div class="column is-4-tablet is-3-desktop">
+        
+        <div class="card">
+          
+          <!-- Flower Image -->
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Flower">
+            </figure>
+          </div>
+
+          <!-- Content -->
+          <div class="card-content">
+            <p class="title is-5">Sunflower 🌻</p>
+            <p class="content">
+              Sunflowers are bright yellow flowers known for turning toward the sun. They symbolize happiness, positivity, and energy.
+            </p>
+
+            <button class="button is-success is-fullwidth">
+              Learn More
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
